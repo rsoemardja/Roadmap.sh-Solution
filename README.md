@@ -3,7 +3,9 @@
 These are the solutions for projects on roadmap.sh.
 
 ## Project URL
-Frontend Projects
+[View the Project Repository](https://github.com/rsoemardja/Roadmap.sh-Solution)
+
+## Frontend Projects
 [Single-Page-CV](https://github.com/rsoemardja/Roadmap.sh-Solution/tree/main/01%20Single-Page-CV)
 
 ## Project Details
