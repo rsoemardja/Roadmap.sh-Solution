@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Rama Komarudin Soemardja - Software Engineer</title>
-        <!-- SEO Meta Tags-->
-        <meta name="description" content="Single Page CV of Rama Komarudin Soemardja - Software Engineer"/>
-        <meta name="keywords" content="Fullstack Developer, HTML, CSS, Javascript, Ruby On Rails, Resume, Web Developer, Software Engineer"/>
-        <meta name="author" content="Rama Komarudin Soemardja"/>
-        <!-- Open Graph Meta Tags-->
-        <meta property="title" content="Rama Komarudin Soemardja - Software Engineer"/>
-        <meta property="description" content="Single Page CV of Rama Komarudin Soemardja - Software Engineer."/>
-        <meta property="image" content="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" />
-        <meta property="type" content="website"/>
-        <meta property ="url" content="https://rsoemardja.com" />
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!-- Favicon -->
-        <link rel="icon" href="https://res.cloudinary.com/duidrg" type="image/x-icon">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} - {{ title }}</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Single Page CV of {{ name }} - {{ title }}"/>
+    <meta name="keywords" content="{{ keywords }}"/>
+    <meta name="author" content="{{ name }}"/>
+    <!-- Open Graph Meta Tags -->
+    <meta property="title" content="{{ name }} - {{ title }}"/>
+    <meta property="description" content="Single Page CV of {{ name }} - {{ title }}"/>
+    <meta property="image" content="{{ image_url }}"/>
+    <meta property="type" content="website"/>
+    <meta property="url" content="{{ website_url }}"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ favicon_url }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
         <header>
-            <h1></h1>
+            <h1>{{ name }}</h1>
+            <h2>{{ title }}</h2>
+            <p>Based in {{ location }}</p>
+            <div class="contact">
+                <p>Phone: {{ phone }}</p>
+                <a href="mailto:{{ email }}" rel="noopener">Email</a>
+                <a href="{{ linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="{{ portfolio }}" target="_blank" rel="noopener">Portfolio</a>
+                <a href="{{ github }}" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </header>
-    </body>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-    <section class="internet">
-        <h3 class=></h3>
-        <a href="https://rsoemardja.com">rsoemardja.com</a><br/>
-        <a href="https://www.linkedin.com/in/rsoemardja">LinkedIn</a><br/>
-    </section>
+        
+        <main>
+            <div class="section">
+                <h2>Summary</h2>
+                <p>{{ summary }}</p>
+            </div>
+            
+            <div class="section">
+                <h2>Education</h2>
+                {{ education }}
+            </div>
+            
+            <div class="section">
+                <h2>Experience</h2>
+                {{ experience }}
+            </div>
+            
+            <div class="section">
+                <h2>Projects</h2>
+                {{ projects }}
+            </div>
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <h3>Programming Languages</h3>
+                <p>{{ languages }}</p>
+                <h3>Frameworks & Technologies</h3>
+                <p>{{ frameworks }}</p>
+                <h3>Development Practices</h3>
+                <p>{{ practices }}</p>
+            </div>
+        </main>
+        
+        <footer>
+            <section class="internet">
+                <h3>Find Me Online</h3>
+                <a href="{{ website_url }}" rel="noopener">{{ website_url }}</a><br/>
+                <a href="{{ linkedin }}" rel="noopener">LinkedIn</a><br/>
+            </section>
+        </footer>
+    </div>
+</body>
 </html>
